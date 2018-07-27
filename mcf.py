@@ -2,9 +2,16 @@ import os
 import subprocess
 
 # 
-def Batch(args,thisDir,_batchDir, _outDir, _from, _to, _exe):
+def Batch(args,thisDir,_batchDir, _outDir, _exe):
     _files = os.listdir(_batchDir)
     _filesChecked = []
+
+    if _exe == 'midicsv':
+        _from = 'mid'
+        _to = args.ext
+    else:
+        _from = args.ext
+        _to = 'mid'
 
     for c in _files:
         if _from in c:
