@@ -33,7 +33,7 @@ def Batch(args,thisDir,_batchDir, _outDir, _exe):
         
             print('\nconverting "{}" from .{} to .{}'.format(m,_from,_to))
         
-            os.chdir(args.exe_dir)
+            os.chdir('midicsv-1.1')
             subprocess.call([_exe,'-v',thisDir+"/"+_batchDir+"/"+m],stdout=outfd, stderr=errfd)
             outfd.close()
             errfd.close()
@@ -44,6 +44,6 @@ def Batch(args,thisDir,_batchDir, _outDir, _exe):
     
             print('\nconverting "{}" from .{} to .{}'.format(m,_from,_to))
 
-            os.chdir(args.exe_dir)
+            os.chdir('midicsv-1.1')
             subprocess.call([_exe,'-v',thisDir+"/"+_batchDir+"/"+m],stdout=outfd)
             outfd.close()

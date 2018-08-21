@@ -1,3 +1,7 @@
+# v1.1.0
+# Coded by Jabril
+# http://sefdstuff.com/jabrils
+
 import os
 import argparse
 import mcf as backend
@@ -6,8 +10,6 @@ import mcf as backend
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, add_help=False)
 parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS,
                     help='** = required')
-parser.add_argument('-d', "--exe_dir", type=str,
-    help='** you have to point to the directory to midicvs')
 parser.add_argument('-sl', "--save_log", action='store_true',
     help='add the -sl flag to save a log of the process')
 parser.add_argument('-bt', "--batch_text", action='store_true',

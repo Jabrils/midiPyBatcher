@@ -2,21 +2,22 @@
 put a bunch of .mid's in a directory, run this script to batch convert it into .txt's, or vice-versa using midicsv!
 
 # How To Use
-* download midicsv (http://www.fourmilab.ch/webtools/midicsv/#Download)
 * download midiPyBatcher (this script)
 * run your terminal of choice
 * use python to run midiPyBatcher.py
-* point to the midicsv director using the -d flag
-* use -bm to convert midi files to text, -bt to convert text files to midi & -sl to save the log
-* enjoy the automation
+* place whatever midi files you want to convert to text in Batch CSV, place whatever text files you want to convert to midi in Batch Midi
+* use -bm to convert midi files to text, -bt to convert text files to midi, define -e if you are using something other than .csv & -sl to save the log
+* enjoy the automation!
 
 # Program Arguments: (** = required)
 ```
-  -h, --help            ** = required
-  -d EXE_DIR, --exe_dir EXE_DIR
-                        ** you have to point to the directory to midicvs
-                        (default: None)
-  -sl, --save_log       logs the info (default: False)
-  -bt, --batch_text     logs the info (default: False)
-  -bm, --batch_midi     logs the info (default: False)
+  -h, --help         ** = required
+  -sl, --save_log    add the -sl flag to save a log of the process (default:
+                     False)
+  -bt, --batch_text  add the -bt flag to batch all text files in Batch Texts
+                     converting them to .mid (default: False)
+  -bm, --batch_midi  add the -bm flag to batch all midi files in Batch Midis
+                     converting them to .csv (default: False)
+  -e EXT, --ext EXT  add the -e flag to specify what extension you want to
+                     read or write the midi file to (default: csv)
 ```
